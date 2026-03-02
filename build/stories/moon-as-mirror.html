@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="../_app/immutable/entry/start.BDssf4eI.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/OLAOaabS.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/gX36eR6H.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BJInEgUa.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.CL7hhIVr.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DnQfQ_Ai.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BihtmGDv.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/Dy6UG7Jb.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.CEMZJAC5.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/DY3hfHyK.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C8bK2Dq4.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CHY8tQMq.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/7.B3bFgnil.js" rel="modulepreload">
+		<!--12qhfyh--><!----><!--1lvhp8f--><!----><title>Building this site — Van Lare Consulting</title>
+		<link href="../_app/immutable/assets/0.BV8e7iAC.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/7.B7PTxZwf.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!--[--><header class="svelte-1elxaub"><div class="inner svelte-1elxaub"><a href="/" class="logo svelte-1elxaub"><span class="logo-text svelte-1elxaub">Van Lare Consulting</span> <span class="logo-bar svelte-1elxaub" aria-hidden="true"></span></a> <nav class="svelte-1elxaub"><a href="/" class="nav-home svelte-1elxaub" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"></path><polyline points="9 21 9 12 15 12 15 21"></polyline></svg></a> <a href="/about" class="svelte-1elxaub">Marcel</a> <a href="/stories" class="svelte-1elxaub active">Stories</a> <a href="/links" class="svelte-1elxaub">Links</a></nav> <a href="mailto:mvlare@gmail.com" class="cta-pill svelte-1elxaub">Get in Touch</a></div></header><!----> <main class="svelte-12qhfyh"><!--[--><div class="story-wrap svelte-1lvhp8f"><div class="story-meta svelte-1lvhp8f"><a href="/stories" class="back svelte-1lvhp8f">← Stories</a> <span class="tag svelte-1lvhp8f">Log</span> <time datetime="2026-03-02" class="svelte-1lvhp8f">March 2, 2026</time></div> <h1>Building this site</h1> <p>I wanted a personal website. Not a template, not a drag-and-drop builder — something I actually built myself, from scratch, that I understood end to end.</p> <p>The stack I landed on: <strong>SvelteKit</strong> with the static adapter, <strong>MDsveX</strong> for writing pages in Markdown, and <strong>GitHub Pages</strong> for hosting.</p> <hr/> <h2>Why SvelteKit</h2> <p>I’d been working with Oracle and PL/SQL for most of my career. Frontend was always something I touched at the edges. Picking up SvelteKit felt like the right move — it’s lean, the syntax is close to plain HTML and JavaScript, and the documentation is clear. No magic you can’t trace.</p> <p>The static adapter (<code>@sveltejs/adapter-static</code>) turns the whole site into plain HTML files at build time. No server needed. That suited me perfectly.</p> <h2>MDsveX</h2> <p>MDsveX is what makes writing content pleasant. It lets you write <code>.svx</code> files — Markdown with Svelte components mixed in. That means a story like this one is just a text file with some frontmatter at the top. No database, no CMS, no API call.</p> <pre class="language-yaml"><!----><code class="language-yaml"><span class="token punctuation">---</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"Building this site"</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2026-03-02</span>
+<span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"Log"</span><span class="token punctuation">]</span>
+<span class="token punctuation">---</span></code><!----></pre> <p>The stories listing page reads all <code>.svx</code> files using Vite’s <code>import.meta.glob</code>, extracts the frontmatter, and renders the list automatically. Add a file, get a new story. Simple.</p> <h2>Deploying on GitHub Pages</h2> <p>Deployment is a GitHub Actions workflow that runs on every push to <code>main</code>. It installs dependencies, runs <code>npm run build</code>, and pushes the <code>build/</code> output to the <code>gh-pages</code> branch. The site is live within a minute of pushing.</p> <p>The one thing that needed attention: SvelteKit’s static adapter needs <code>export const prerender = true</code> set globally, otherwise pages don’t appear as HTML files in the build output.</p> <hr/> <h2>What I learned</h2> <p>Starting with a real project is faster than following tutorials. Every problem you hit is one you actually care about solving.</p> <p>SvelteKit and MDsveX are genuinely well-designed tools. The rough edges are few and the mental model is consistent. I’d pick this stack again.</p></div><!--]--><!----></main> <footer class="svelte-jz8lnl"><div class="inner svelte-jz8lnl"><div class="col brand svelte-jz8lnl"><span class="brand-name svelte-jz8lnl">Van Lare Consulting</span></div> <div class="col svelte-jz8lnl"><h4 class="svelte-jz8lnl">Sections</h4> <ul class="svelte-jz8lnl"><li><a href="/about" class="svelte-jz8lnl">Marcel</a></li> <li><a href="/stories" class="svelte-jz8lnl">Stories</a></li> <li><a href="/links" class="svelte-jz8lnl">Links</a></li></ul></div> <div class="col svelte-jz8lnl"><h4 class="svelte-jz8lnl">Connect</h4> <ul class="svelte-jz8lnl"><li><a href="https://github.com/mvlare" target="_blank" rel="noopener" class="svelte-jz8lnl">GitHub</a></li> <li><a href="https://www.linkedin.com/in/mvlare/" target="_blank" rel="noopener" class="svelte-jz8lnl">LinkedIn</a></li> <li><a href="/docs/CV-mvlare_dutch_2025_12_14.pdf" target="_blank" rel="noopener" class="svelte-jz8lnl">Resume</a></li> <li><a href="mailto:mvlare@gmail.com" class="svelte-jz8lnl">Email</a></li></ul></div></div> <div class="copyright svelte-jz8lnl"><div class="copyright-inner svelte-jz8lnl"><span>© 2026 Van Lare Consulting.</span> <span>Made with curiosity.</span></div></div></footer><!----><!--]--><!--]--> <!--[!--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_z9mksf = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.BDssf4eI.js"),
+						import("../_app/immutable/entry/app.CL7hhIVr.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 7],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
