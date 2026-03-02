@@ -1,24 +1,25 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 </script>
 
 <header>
 	<div class="inner">
-		<a href="/" class="logo">
+		<a href="{base}/" class="logo">
 			<span class="logo-text">Van Lare Consulting</span>
 			<span class="logo-bar" aria-hidden="true"></span>
 		</a>
 
 		<nav>
-			<a href="/" class="nav-home" class:active={$page.url.pathname === '/'} aria-label="Home">
+			<a href="{base}/" class="nav-home" class:active={$page.route.id === '/'} aria-label="Home">
 				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 					<path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
 					<polyline points="9 21 9 12 15 12 15 21"/>
 				</svg>
 			</a>
-			<a href="/about" class:active={$page.url.pathname === '/about'}>Marcel</a>
-			<a href="/stories" class:active={$page.url.pathname.startsWith('/stories')}>Stories</a>
-			<a href="/links" class:active={$page.url.pathname === '/links'}>Links</a>
+			<a href="{base}/about" class:active={$page.route.id === '/about'}>Marcel</a>
+			<a href="{base}/stories" class:active={$page.route.id?.startsWith('/stories')}>Stories</a>
+			<a href="{base}/links" class:active={$page.route.id === '/links'}>Links</a>
 		</nav>
 
 		<a href="mailto:mvlare@gmail.com" class="cta-pill">Get in Touch</a>

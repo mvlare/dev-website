@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	// Future: glob stories from ./*/+page.svx
 	// For now, a stub listing page.
 	const stories = [
@@ -33,7 +34,7 @@
 	<ul class="story-list">
 		{#each stories as story}
 			<li class="story-item">
-				<a href="/stories/{story.slug}" class="story-link">
+				<a href="{base}/stories/{story.slug}" class="story-link">
 					<div class="story-meta">
 						<time datetime={story.date}>{story.date}</time>
 						{#each story.tags as tag}

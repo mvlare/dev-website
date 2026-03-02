@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <footer>
 	<div class="inner">
 		<div class="col brand">
@@ -7,9 +11,9 @@
 		<div class="col">
 			<h4>Sections</h4>
 			<ul>
-				<li><a href="/about">Marcel</a></li>
-				<li><a href="/stories">Stories</a></li>
-				<li><a href="/links">Links</a></li>
+				<li><a href="{base}/about">Marcel</a></li>
+				<li><a href="{base}/stories">Stories</a></li>
+				<li><a href="{base}/links">Links</a></li>
 			</ul>
 		</div>
 
@@ -18,7 +22,7 @@
 			<ul>
 				<li><a href="https://github.com/mvlare" target="_blank" rel="noopener">GitHub</a></li>
 				<li><a href="https://www.linkedin.com/in/mvlare/" target="_blank" rel="noopener">LinkedIn</a></li>
-				<li><a href="/docs/CV-mvlare_dutch_2025_12_14.pdf" target="_blank" rel="noopener">Resume</a></li>
+				<li><a href="{base}/docs/CV-mvlare_dutch_2025_12_14.pdf" target="_blank" rel="noopener">Resume</a></li>
 				<li><a href="mailto:mvlare@gmail.com">Email</a></li>
 			</ul>
 		</div>
