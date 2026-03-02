@@ -1,0 +1,149 @@
+---
+title: "Building this site"
+date: 2026-03-02
+tags: ["Log"]
+---
+
+<svelte:head>
+  <title>Building this site — Van Lare Consulting</title>
+</svelte:head>
+
+<div class="story-wrap">
+
+<div class="story-meta">
+  <a href="/stories" class="back">← Stories</a>
+  <span class="tag">Log</span>
+  <time datetime="2026-03-02">March 2, 2026</time>
+</div>
+
+# Building this site
+
+I wanted a personal website. Not a template, not a drag-and-drop builder — something I actually built myself, from scratch, that I understood end to end.
+
+The stack I landed on: **SvelteKit** with the static adapter, **MDsveX** for writing pages in Markdown, and **GitHub Pages** for hosting.
+
+---
+
+## Why SvelteKit
+
+I'd been working with Oracle and PL/SQL for most of my career. Frontend was always something I touched at the edges. Picking up SvelteKit felt like the right move — it's lean, the syntax is close to plain HTML and JavaScript, and the documentation is clear. No magic you can't trace.
+
+The static adapter (`@sveltejs/adapter-static`) turns the whole site into plain HTML files at build time. No server needed. That suited me perfectly.
+
+## MDsveX
+
+MDsveX is what makes writing content pleasant. It lets you write `.svx` files — Markdown with Svelte components mixed in. That means a story like this one is just a text file with some frontmatter at the top. No database, no CMS, no API call.
+
+```yaml
+---
+title: "Building this site"
+date: 2026-03-02
+tags: ["Log"]
+---
+```
+
+The stories listing page reads all `.svx` files using Vite's `import.meta.glob`, extracts the frontmatter, and renders the list automatically. Add a file, get a new story. Simple.
+
+## Deploying on GitHub Pages
+
+Deployment is a GitHub Actions workflow that runs on every push to `main`. It installs dependencies, runs `npm run build`, and pushes the `build/` output to the `gh-pages` branch. The site is live within a minute of pushing.
+
+The one thing that needed attention: SvelteKit's static adapter needs `export const prerender = true` set globally, otherwise pages don't appear as HTML files in the build output.
+
+---
+
+## What I learned
+
+Starting with a real project is faster than following tutorials. Every problem you hit is one you actually care about solving.
+
+SvelteKit and MDsveX are genuinely well-designed tools. The rough edges are few and the mental model is consistent. I'd pick this stack again.
+
+</div>
+
+<style>
+  .story-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .back {
+    font-size: 14px;
+    color: var(--color-green);
+    font-weight: 500;
+  }
+  .back:hover { text-decoration: underline; }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--color-tag);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  time {
+    font-size: 13px;
+    color: var(--color-gray-mid);
+    margin-left: auto;
+  }
+
+  .story-wrap :global(h1) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.1;
+    color: var(--color-black);
+    margin-bottom: 32px;
+  }
+
+  .story-wrap :global(h2) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--color-black);
+    margin: 40px 0 16px;
+  }
+
+  .story-wrap :global(p) {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    margin-bottom: 24px;
+  }
+
+  .story-wrap :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 40px 0;
+  }
+
+  .story-wrap :global(pre) {
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    font-size: 14px;
+    overflow-x: auto;
+    margin-bottom: 24px;
+  }
+
+  .story-wrap :global(code) {
+    font-family: 'Fira Code', 'Cascadia Code', monospace;
+  }
+
+  .story-wrap :global(strong) {
+    color: var(--color-black);
+    font-weight: 600;
+  }
+</style>

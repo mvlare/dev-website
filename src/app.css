@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Outfit:wght@400;500;600&display=swap');
+
+:root {
+	--color-green:      #006400;
+	--color-green-mid:  #228B22;
+	--color-black:      #0A0A0A;
+	--color-gray-dark:  #777777;
+	--color-gray-mid:   #999999;
+	--color-bg:         #FFFFFF;
+	--color-bg-subtle:  #FAFAFA;
+	--color-border:     #E5E5E5;
+	--color-tag:        #6B2D3C;
+
+	--font-heading: 'Cormorant Garamond', Georgia, serif;
+	--font-body:    'Outfit', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: var(--font-body);
+	font-size: 16px;
+	background: var(--color-bg);
+	color: var(--color-black);
+}
+
+body {
+	min-height: 100vh;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}

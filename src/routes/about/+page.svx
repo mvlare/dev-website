@@ -1,0 +1,115 @@
+---
+title: "Marcel"
+---
+
+<svelte:head>
+  <title>Marcel — Van Lare Consulting</title>
+</svelte:head>
+
+<div class="page-wrap">
+
+# Marcel
+
+<div class="contact-grid">
+  <div>
+    drs. M.M.P. van Lare<br>
+    Wapendragervlinder 31<br>
+    3544DL Utrecht
+  </div>
+  <div>
+    mobiel: 06-21285569<br>
+    email: mvlare@gmail.com<br>
+    linkedin: <a href="https://www.linkedin.com/in/mvlare/" target="_blank" rel="noopener">linkedin.com/in/mvlare</a><br>
+    github: <a href="https://github.com/mvlare" target="_blank" rel="noopener">github.com/mvlare</a><br>
+    btw: NL1603.75.472.B01<br>
+    kvk: 09189006
+  </div>
+</div>
+
+<div class="resume-link">
+  <a href="/docs/CV-mvlare_dutch_2025_12_14.pdf" target="_blank" rel="noopener">Resume (cv) <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-left:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></a>
+</div>
+
+## This site
+
+- **Marcel** (here) — a bit about me
+- **Stories** — reflections, notes, explorations and logs
+- **Links** — a curated collection of resources I keep coming back to
+
+</div>
+
+<style>
+  .page-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .page-wrap :global(h1) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 56px;
+    color: var(--color-black);
+    margin-bottom: 32px;
+  }
+
+  .page-wrap :global(h2) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--color-black);
+    margin: 40px 0 16px;
+  }
+
+  .page-wrap :global(p) {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--color-gray-dark);
+    margin-bottom: 20px;
+  }
+
+  .page-wrap :global(ul) {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page-wrap :global(.contact-grid) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #fff;
+    background: var(--color-green);
+    padding: 24px 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+  }
+
+  .page-wrap :global(.resume-link) {
+    margin: 40px 0 16px;
+  }
+
+  .page-wrap :global(.resume-link a) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--color-black);
+    text-decoration: none;
+    text-shadow: 0 0 18px rgba(34, 139, 34, 0.5);
+    transition: text-shadow 0.2s;
+  }
+
+  .page-wrap :global(.resume-link a:hover) {
+    text-shadow: 0 0 28px rgba(34, 139, 34, 0.85);
+  }
+
+  .page-wrap :global(li) {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-gray-dark);
+  }
+</style>

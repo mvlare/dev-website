@@ -1,0 +1,146 @@
+---
+title: "Building with Claude AI"
+date: 2026-03-02
+tags: ["Exploration"]
+---
+
+<svelte:head>
+  <title>Building with Claude AI — Van Lare Consulting</title>
+</svelte:head>
+
+<div class="story-wrap">
+
+<div class="story-meta">
+  <a href="/stories" class="back">← Stories</a>
+  <span class="tag">Exploration</span>
+  <time datetime="2026-03-02">March 2, 2026</time>
+</div>
+
+# Building with Claude AI
+
+*I asked claude to generate this story. 
+It needs several adjustements for it to be Me, change focus, and describe what i found really important myself. 
+But not bad for a starter.*
+
+I didn't build this website alone. Claude AI was part of the process from the start — and working with it taught me things I didn't expect.
+
+My background is Oracle and PL/SQL. Frontend work was always at the edges for me: enough to get by, not enough to feel fluent. When I decided to build this site in SvelteKit, I knew I'd be learning as I went. Claude became the pair programmer I didn't have.
+
+---
+
+## What it actually looked like
+
+The workflow was conversational. I'd describe what I wanted — a two-column links page, a favicon with VLC as a monogram, a green glow on hover — and Claude would write the code, explain the reasoning, and adjust when something didn't look right.
+
+What surprised me was how much I learned in the process. Because Claude explains its choices, not just delivers code, I started understanding *why* things work. Why the static adapter needs `prerender = true`. Why SVG favicons built from paths are more reliable than text-based ones. Why MDsveX is a better fit for content pages than plain Svelte.
+
+I wasn't just accepting output. I was asking follow-up questions, pushing back, making decisions. Claude handled the implementation; I kept the direction.
+
+## Where it helped most
+
+A few areas where having Claude alongside made a real difference:
+
+- **Getting started fast** — No blank-page paralysis. Describe the structure, get a working scaffold.
+- **Debugging edge cases** — Small things like prerendering configuration or favicon caching in Edge that would have cost hours to figure out alone.
+- **Design consistency** — Suggesting hover effects, spacing, and colour usage that fitted the existing style rather than clashing with it.
+- **Content** — Helping shape story drafts into something readable without losing my own voice.
+
+## What it isn't
+
+Claude doesn't make decisions for you. It doesn't know what your site should *say*, or what matters to you, or what you want people to feel when they land on it. That part is still entirely yours.
+
+And there's a discipline to it: if you don't understand what it builds, you end up with code you can't maintain. The goal was always to understand the output, not just ship it.
+
+---
+
+This site exists because I was willing to build it imperfectly, in the open, with help. That feels like the right way to work in 2026.
+
+</div>
+
+<style>
+  .story-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .back {
+    font-size: 14px;
+    color: var(--color-green);
+    font-weight: 500;
+  }
+  .back:hover { text-decoration: underline; }
+
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--color-tag);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  time {
+    font-size: 13px;
+    color: var(--color-gray-mid);
+    margin-left: auto;
+  }
+
+  .story-wrap :global(h1) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.1;
+    color: var(--color-black);
+    margin-bottom: 32px;
+  }
+
+  .story-wrap :global(h2) {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--color-black);
+    margin: 40px 0 16px;
+  }
+
+  .story-wrap :global(p) {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    margin-bottom: 24px;
+  }
+
+  .story-wrap :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 40px 0;
+  }
+
+  .story-wrap :global(ul) {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .story-wrap :global(li) {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--color-gray-dark);
+  }
+
+  .story-wrap :global(strong) {
+    color: var(--color-black);
+    font-weight: 600;
+  }
+</style>
