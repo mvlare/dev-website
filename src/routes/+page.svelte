@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>Van Lare Consulting — Explore and build</title>
 </svelte:head>
@@ -20,17 +24,17 @@
 <section class="metrics">
 	<div class="metrics-inner">
 		<div class="metric">
-			<a href="/about" class="metric-btn metric-btn-outline">Marcel</a>
+			<a href="{base}/about" class="metric-btn metric-btn-outline">Marcel</a>
 			<span class="metric-label">Earth — Who I Am</span>
 		</div>
 		<div class="divider" aria-hidden="true"></div>
 		<div class="metric">
-			<a href="/stories" class="metric-btn metric-btn-primary">Read Stories</a>
+			<a href="{base}/stories" class="metric-btn metric-btn-primary">Read Stories</a>
 			<span class="metric-label">Moon — Reflection</span>
 		</div>
 		<div class="divider" aria-hidden="true"></div>
 		<div class="metric">
-			<a href="/links" class="metric-btn metric-btn-ghost">Browse Links</a>
+			<a href="{base}/links" class="metric-btn metric-btn-ghost">Browse Links</a>
 			<span class="metric-label">Sun — Selection</span>
 		</div>
 	</div>
@@ -41,7 +45,7 @@
 	<div class="about-inner">
 		<div class="about-image-wrap">
 			<img
-				src="/images/2015_epic_earthmoonstill.jpg"
+				src="{base}/images/2015_epic_earthmoonstill.jpg"
 				alt="Earth and Moon from NASA EPIC camera"
 				class="about-img"
 			/>
@@ -59,7 +63,7 @@
 			  Right now, I'm exploring SvelteKit and Postgres together with Claude AI through a private project, 
 			  expanding my toolkit and experimenting with new ways of building.
 			</p>
-			<a href="/about" class="arrow-link">
+			<a href="{base}/about" class="arrow-link">
 				Read more about me
 				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 					<line x1="7" y1="17" x2="17" y2="7"/>
@@ -78,7 +82,7 @@
 				<p class="section-label light">Stories</p>
 				<h2 class="light">Reflections &amp; Explorations</h2>
 			</div>
-			<a href="/stories" class="arrow-link light">
+			<a href="{base}/stories" class="arrow-link light">
 				All stories
 				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 					<line x1="7" y1="17" x2="17" y2="7"/>
@@ -88,10 +92,10 @@
 		</div>
 
 		<div class="cards">
-			<a href="/stories/moon-as-mirror" class="card">
+			<a href="{base}/stories/moon-as-mirror" class="card">
 				<div class="card-img-wrap">
 					<img
-						src="/images/GSFC_20171208_Archive_e001982_nasa_moon.jpg"
+						src="{base}/images/GSFC_20171208_Archive_e001982_nasa_moon.jpg"
 						alt="Moon surface photograph"
 					/>
 				</div>
@@ -102,10 +106,10 @@
 				</div>
 			</a>
 
-			<a href="/stories/building-in-the-open" class="card">
+			<a href="{base}/stories/building-in-the-open" class="card">
 				<div class="card-img-wrap">
 					<img
-						src="/images/PIA00404~large_nasa_moon.jpg"
+						src="{base}/images/PIA00404~large_nasa_moon.jpg"
 						alt="Moon surface photograph"
 					/>
 				</div>
@@ -166,7 +170,7 @@
 			</li>
 		</ol>
 
-		<a href="/links" class="arrow-link">See all links
+		<a href="{base}/links" class="arrow-link">See all links
 			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 				<line x1="7" y1="17" x2="17" y2="7"/>
 				<polyline points="7 7 17 7 17 17"/>

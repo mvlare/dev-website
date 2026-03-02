@@ -4,6 +4,10 @@ date: 2026-03-02
 tags: ["Log"]
 ---
 
+<script>
+  import { base } from '$app/paths';
+</script>
+
 <svelte:head>
   <title>Building this site — Van Lare Consulting</title>
 </svelte:head>
@@ -11,7 +15,7 @@ tags: ["Log"]
 <div class="story-wrap">
 
 <div class="story-meta">
-  <a href="/stories" class="back">← Stories</a>
+  <a href="{base}/stories" class="back">← Stories</a>
   <span class="tag">Log</span>
   <time datetime="2026-03-02">March 2, 2026</time>
 </div>
