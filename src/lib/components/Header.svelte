@@ -110,4 +110,29 @@
 	.cta-pill:hover {
 		background: var(--color-green-mid);
 	}
+
+	@media (max-width: 768px) {
+		.inner {
+			padding: 0 16px;
+			gap: 12px;
+		}
+		.logo {
+			margin-right: 0;
+		}
+		.logo-text {
+			font-size: 17px;
+		}
+		nav {
+			gap: 16px;
+		}
+		nav a {
+			font-size: 14px;
+		}
+		.nav-home {
+			display: none;
+		}
+		.cta-pill {
+			display: none;
+		}
+	}
 </style>

@@ -116,4 +116,18 @@ title: "Marcel"
     line-height: 1.6;
     color: var(--color-gray-dark);
   }
+
+  @media (max-width: 768px) {
+    .page-wrap {
+      padding: 48px 24px;
+    }
+    .page-wrap :global(.contact-grid) {
+      grid-template-columns: 1fr;
+    }
+    .page-wrap :global(.contact-grid > div:first-child) {
+      white-space: nowrap;
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+      padding-bottom: 16px;
+    }
+  }
 </style>
