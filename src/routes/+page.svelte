@@ -272,7 +272,8 @@ h2.light { color: #fff; }
 	padding: 48px 0 16px;
 }
 .hero-inner {
-	max-width: 720px;
+	max-width: 1440px;
+	margin: 0 auto;
 	padding: 0 80px;
 }
 .hero-label {
@@ -597,6 +598,9 @@ h2.light { color: #fff; }
 .linkedin-link:hover { color: var(--color-green); }
 
 @media (max-width: 768px) {
+  .hero-inner {
+    padding: 0 24px;
+  }
   .metrics-inner {
     padding: 0 16px;
     align-items: stretch;
