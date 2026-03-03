@@ -23,7 +23,7 @@
 				<li><a href="https://github.com/mvlare" target="_blank" rel="noopener">GitHub</a></li>
 				<li><a href="https://www.linkedin.com/in/mvlare/" target="_blank" rel="noopener">LinkedIn</a></li>
 				<li><a href="{base}/docs/CV-mvlare_dutch_2025_12_14.pdf" target="_blank" rel="noopener">Resume</a></li>
-				<li><a href="mailto:mvlare@gmail.com">Email</a></li>
+				<li><a href="mailto:info@vanlareconsulting.nl">Email</a></li>
 			</ul>
 		</div>
 	</div>
@@ -110,5 +110,17 @@
 		justify-content: space-between;
 		font-size: 13px;
 		color: var(--color-gray-mid);
+	}
+
+	@media (max-width: 768px) {
+		.inner {
+			padding: 40px 24px;
+			gap: 32px;
+		}
+		.copyright-inner {
+			padding: 16px 24px;
+			flex-direction: column;
+			gap: 4px;
+		}
 	}
 </style>

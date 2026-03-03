@@ -22,7 +22,7 @@
 			<a href="{base}/links" class:active={$page.route.id === '/links'}>Links</a>
 		</nav>
 
-		<a href="mailto:mvlare@gmail.com" class="cta-pill">Get in Touch</a>
+		<a href="mailto:info@vanlareconsulting.nl" class="cta-pill">Get in Touch</a>
 	</div>
 </header>
 

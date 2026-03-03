@@ -22,7 +22,7 @@ title: "Marcel"
   </div>
   <div>
     mobiel: 06-21285569<br>
-    email: mvlare@gmail.com<br>
+    email: info@vanlareconsulting.nl<br>
     linkedin: <a href="https://www.linkedin.com/in/mvlare/" target="_blank" rel="noopener">linkedin.com/in/mvlare</a><br>
     github: <a href="https://github.com/mvlare" target="_blank" rel="noopener">github.com/mvlare</a><br>
     btw: NL1603.75.472.B01<br>
