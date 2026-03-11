@@ -22,7 +22,7 @@
 			<ul>
 				<li><a href="https://github.com/mvlare" target="_blank" rel="noopener">GitHub</a></li>
 				<li><a href="https://www.linkedin.com/in/mvlare/" target="_blank" rel="noopener">LinkedIn</a></li>
-				<li><a href="{base}/docs/CV-mvlare_dutch_2025_12_14.pdf" target="_blank" rel="noopener">Resume</a></li>
+				<li><a href="{base}/docs/CV-mvlare_2026_11_03.pdf" target="_blank" rel="noopener">Resume</a></li>
 				<li><a href="mailto:info@vanlareconsulting.nl">Email</a></li>
 			</ul>
 		</div>
